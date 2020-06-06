@@ -6,4 +6,10 @@ class User < ApplicationRecord
     validates :password, presence: true, length: { in: 6..20 }
     has_secure_password
     # Do validations for each model
+
+
+    # Also, do the relationships 
+    #     -has_many :notes
+    #     -belongs_to :user
+    #     -has_many :notes, through: :users
 end
