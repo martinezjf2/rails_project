@@ -7,6 +7,8 @@ class User < ApplicationRecord
     has_secure_password
     # Do validations for each model
 
+    has_many :notes
+    has_many :notes, through: :books
 
     # Also, do the relationships 
     #     -has_many :notes
