@@ -5,6 +5,7 @@ class UsersController < ApplicationController
     end
 
     def new
+        @user = User.new(user_params)
 
     end
 
@@ -17,6 +18,12 @@ class UsersController < ApplicationController
     end
 
     def show
+
+    end
+
+    private
+
+    def user_params
 
     end
     
