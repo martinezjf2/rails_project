@@ -1,5 +1,7 @@
 class Book < ApplicationRecord
     has_many :notes, through: :users
+    #create Validations
+    
 end
 
 # class Note < ApplicationRecord
