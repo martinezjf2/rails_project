@@ -26,10 +26,10 @@ ActiveRecord::Schema.define(version: 2020_06_05_172200) do
     t.integer "page_number"
     t.string "summary"
     t.string "questions"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
     t.integer "user_id"
     t.integer "book_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
   end
 
   create_table "users", force: :cascade do |t|
