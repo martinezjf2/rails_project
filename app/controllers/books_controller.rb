@@ -9,6 +9,7 @@ class BooksController < ApplicationController
     end
 
     def create
+        @book = Book.new(book_params)
         
 
     end
@@ -19,6 +20,12 @@ class BooksController < ApplicationController
 
     def update
 
+    end
+
+    private
+
+    def book_params
+        params.require(:book).permit(:title, :author_first_name, :author_last_name)
     end
 
 end
