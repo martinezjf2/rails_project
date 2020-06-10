@@ -1,8 +1,7 @@
 class ApplicationController < ActionController::Base
-end
 
 
-# helper_method :current_user
+helper_method :current_user
 #   #
   def current_user
     User.find_by(id: session[:user_id])
@@ -15,3 +14,6 @@ end
         redirect_to '/'
       end
   end
+
+end
+
