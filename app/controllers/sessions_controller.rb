@@ -18,8 +18,8 @@ class SessionsController < ApplicationController
 
 
     def destroy
-        #make sure the hidden input field for the form and make sure the logout button is on as well
-
+        session.delete :user_id
+        redirect_to "/"
     end
 
 end
