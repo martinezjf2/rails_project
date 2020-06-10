@@ -2,12 +2,24 @@
 
 
 
-<p>Show all recipes here, and make sure you have the logout button within the navbar, also, want to have a button such as to add a book, and to add a note to the book right after the note, also want to make sure to add a error message<p>
+<p>Show all books with notes underneath here, and make sure you have the logout button within the navbar, also, want to have a button such as to add a book, and to add a note to the book right after the note, also want to make sure to add a error message<p>
 
 
 <%=button_to "logout", logout_path %>
 
-<h1>Would you like to add a new book?</h1>
+<h1>Would you like to add a new book?</h1><br>
 
-<%= link_to 'Add a Book', new_book_path %>
+<%= link_to 'Add a Book', new_book_path %><br>
 
+
+<br>
+
+
+<% @books.each do |book| %>
+
+<li><%= book.title %> -
+<%= book.author_first_name %> <%= book.author_last_name %>
+</li>
+<% end %>
+
+<!-- when i add a new book, i want to make sure that the new book is added on top of the list -->
