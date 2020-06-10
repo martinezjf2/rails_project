@@ -11,7 +11,7 @@ class BooksController < ApplicationController
     def create
         @book = Book.new(book_params)
         if @book.save
-            redirect_to books_path #make sure the latest book submitted is on top
+            redirect_to book_path(@book) #make sure the latest book submitted is on top
         else
             render :new
         end
