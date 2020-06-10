@@ -23,10 +23,27 @@ class BooksController < ApplicationController
         @book = Book.find_by(id: params[:id])
     end
 
+    def edit
+        @book = Book.find_by(id: params[:id])
+    end
+
+
     def update
         @book = Book.find_by(id: params[:id])
-
+        @book.update(book_params)
+        if @book.save
+            redirect_to user_book_path(@book)
+        else
+            render :edit
+        end
     end
+
+    def destroy
+       @book = Book.find_by(id: params[:id])
+        @book.delete
+       redirect_to user_books_path
+    end
+
 
     private
 
