@@ -13,7 +13,7 @@ class UsersController < ApplicationController
         @user = User.new(user_params)
         if @user.save
             session[:user_id] = @user.id
-            redirect_to user_books_path(@user)
+            redirect_to user_books_path(@user) #'/users', which is the books#index, want it to go to the new_user_book_path which is books#new
         else
             render :new
         end
