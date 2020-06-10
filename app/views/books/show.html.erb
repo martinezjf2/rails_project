@@ -3,6 +3,10 @@ Here we want to display the book title, and the notes that were given
 <br>
 <h1><%= @book.title %></h1>
 
+<% @book.notes.each do |note| %>
+<%= note %>
+<%end%>
+
 
 Add new notes with a link_to and render the :new in the notes views
 
