@@ -11,3 +11,5 @@ Here we want to display the book title, and the notes that were given
 
 
 <%= link_to "Delete", @book, method: :delete, data: { confirm: "Really?" } %>
+
+<%= link_to "Add a note", new_note_path(@book)%>
