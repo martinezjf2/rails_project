@@ -15,7 +15,7 @@ class BooksController < ApplicationController
             redirect_to book_path(@book) #make sure the latest book submitted is on top
         else
             render :new
-            flash[:message] = "Please fill all requirements before submitting"
+            flash[:notice] = "Please fill all requirements before submitting"
         end
     end
 
@@ -24,6 +24,7 @@ class BooksController < ApplicationController
     end
 
     def update
+        @book = Book.find_by(id: params[:id])
 
     end
 
