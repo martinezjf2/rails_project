@@ -10,6 +10,13 @@
 <%= f.label "Author's Last Name" %>
 <%= f.text_field :author_last_name %><br><br>
 
+<%= f.label "Page Number" %>
+<%= f.fields_for :notes do |n| %>
+    <%= n.text_field :page_number %><br><br>
+    <%= n.label "Summary" %>
+    <%= n.text_area :summary %><br><br>
+    <%end%>
+
 <%= f.submit "Submit Book" %>
 
 <!-- fields_for @notes, we want to make sure to add notes on the book -->

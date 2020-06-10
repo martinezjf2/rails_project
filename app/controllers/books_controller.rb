@@ -6,6 +6,7 @@ class BooksController < ApplicationController
 
     def new
         @book = Book.new
+        @book.notes.build
     end
 
     def create
@@ -28,7 +29,7 @@ class BooksController < ApplicationController
     private
 
     def book_params
-        params.require(:book).permit(:title, :author_first_name, :author_last_name)
+        params.require(:book).permit(:title, :author_first_name, :author_last_name, notes_attirbutes: [:page_number, :summary])
     end
 
 end
