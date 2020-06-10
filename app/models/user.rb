@@ -1,6 +1,6 @@
 class User < ApplicationRecord
-    has_many :books
-    has_many :notes, through: :books
+    has_many :notes
+    has_many :books, through: :notes
     has_secure_password
 
     validates :first_name, presence: true
