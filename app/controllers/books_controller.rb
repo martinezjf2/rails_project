@@ -10,6 +10,7 @@ class BooksController < ApplicationController
     end
 
     def create
+        # binding.pry
         @book = Book.new(book_params)
         if @book.save
             redirect_to book_path(@book) #make sure the latest book submitted is on top
@@ -32,7 +33,7 @@ class BooksController < ApplicationController
         @book = Book.find_by(id: params[:id])
         @book.update(book_params)
         if @book.save
-            redirect_to user_book_path(@book)
+            redirect_to book_path(@book)
         else
             render :edit
         end
@@ -48,7 +49,7 @@ class BooksController < ApplicationController
     private
 
     def book_params
-        params.require(:book).permit(:title, :author_first_name, :author_last_name, notes_attirbutes: [:page_number, :summary])
+        params.require(:book).permit(:title, :author_first_name, :author_last_name, notes_attributes: [:page_number, :summary])
     end
 
 end

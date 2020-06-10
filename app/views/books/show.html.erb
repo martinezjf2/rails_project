@@ -1,9 +1,11 @@
 Here we want to display the book title, and the notes that were given
 
 <br>
-<h1><%= @book.title %></h1>
+<h3><%= @book.title %> - <%= @book.author_first_name%> <%=@book.author_last_name%></h3>
 
-<!-- <%= @book.notes%> -->
+<% @book.notes.each do |note| %>
+<%= note.summary %>
+<%end%>
 
 <%= link_to "Edit Book", edit_user_book_path(@book) %>
 
