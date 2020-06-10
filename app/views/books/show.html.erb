@@ -8,3 +8,4 @@ Here we want to display the book title, and the notes that were given
 <%= link_to "Edit Book", edit_user_book_path(@book) %>
 
 
+<%= link_to "Delete", @book, method: :delete, data: { confirm: "Really?" } %>

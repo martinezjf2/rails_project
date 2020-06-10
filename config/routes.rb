@@ -6,6 +6,8 @@ Rails.application.routes.draw do
     end
   end
   
+  
+  
   resources :users
   resources :books
 
@@ -20,6 +22,7 @@ post '/signup', to: 'users#create'
   post '/login', to: 'sessions#create'
   get '/logout', to: 'sessions#destroy' #is this correct?
   post '/logout', to: 'sessions#destroy'
+  
 
 end
 
