@@ -10,11 +10,11 @@ class BooksController < ApplicationController
 
     def create
         @book = Book.new(book_params)
-        # if @book.save
-        #     redirect_to user_book_path(@book)
-        # else
-        #     redirect_to 
-        # end
+        if @book.save
+            redirect_to books_path #make sure the latest book submitted is on top
+        else
+            render :new
+        end
     end
 
     def show
