@@ -1,0 +1,19 @@
+<h1>Let's edit a book</h1>
+
+<%= form_for :book do |f| %>
+<%= f.label "Title" %>
+<%= f.text_field :title%><br><br>
+
+<%= f.label "Author's First Name" %>
+<%= f.text_field :author_first_name %><br><br>
+
+<%= f.label "Author's Last Name" %>
+<%= f.text_field :author_last_name %><br><br>
+
+<%= f.submit "Submit Book" %>
+
+<!-- fields_for @notes, we want to make sure to add notes on the book -->
+
+<!-- have to add a hidden field relating the book to the user -->
+
+<% end %>
