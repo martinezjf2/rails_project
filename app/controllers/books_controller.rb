@@ -12,6 +12,7 @@ class BooksController < ApplicationController
     def create
         # binding.pry
         @book = Book.new(book_params)
+        current_user.notes << @book.notes[0]
         if @book.save
             redirect_to book_path(@book) #make sure the latest book submitted is on top
         else

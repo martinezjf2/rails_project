@@ -9,6 +9,7 @@ class NotesController < ApplicationController
     end
 
     def new 
+        #add something here based to associate the note with the book based on the url
         @note = Note.new
     end
 

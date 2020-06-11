@@ -3,6 +3,7 @@
 <%= form_for @note do |f| %>
 <%= f.label "Page Number"%>
 <%= f.text_field :page_number %><br><br>
+<%= f.hidden_field :book_id %>
 <%= f.label "Summary" %>
 <%= f.text_area :summary %><br><br><br><br>
 <%= f.submit "Add Note" %>
