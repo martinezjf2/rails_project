@@ -5,7 +5,6 @@ class SessionsController < ApplicationController
     end
 
     def fb_create
-        
         @user = User.find_or_create_by(username: auth["info"]["email"])
         if !@user.password
             @user.password = 'omniauth_password' #random generator
@@ -13,7 +12,6 @@ class SessionsController < ApplicationController
         @user.save
         session[:user_id] = @user.id
         redirect_to books_path(@user)
-        
     end
 
 

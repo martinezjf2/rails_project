@@ -7,9 +7,11 @@
 
 - Also want a search to find any search on a title, notes, or author
 
-- when submitting a new book, nothing happens, it does not save, nor it does not redirect.
+- when submitting a new book, nothing happens, it does not save, nor it does not redirect. changed the @book to :book and it works
 
 - adding the link_to for a new_note within the books#show
 
 i want the delete button on the show.html.erb in the book#show
 <%= link_to "Delete", user_books_path(@book.user_id), method: :delete, data: { confirm: "Really?" } %>
+
+- show the navbar when loggin in with facebook
