@@ -42,7 +42,7 @@ class BooksController < ApplicationController
     def destroy
        @book = Book.find_by(id: params[:id])
        @book.delete
-       redirect_to user_books_path
+       redirect_to books_path
        #hidden field for [:user_id]
     end
 
@@ -50,7 +50,7 @@ class BooksController < ApplicationController
     private
 
     def book_params
-        params.require(:book).permit(:title, :author_first_name, :author_last_name, notes_attributes: [:page_number, :summary])
+        params.require(:book).permit(:title, :author_first_name, :author_last_name, notes_attributes: [:page_number, :summary, :id])
     end
 
 end

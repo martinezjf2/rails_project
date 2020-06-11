@@ -12,6 +12,6 @@
 - adding the link_to for a new_note within the books#show
 
 i want the delete button on the show.html.erb in the book#show
-<%= link_to "Delete", user_books_path(@book.user_id), method: :delete, data: { confirm: "Really?" } %>
+
 
 - show the navbar when loggin in with facebook

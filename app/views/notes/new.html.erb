@@ -1,2 +1,9 @@
-add a new note for the book that has been chosen
-
+<h1>Add A Note</h1>
+<br>
+<%= form_for @note do |f| %>
+<%= f.label "Page Number"%>
+<%= f.text_field :page_number %><br><br>
+<%= f.label "Summary" %>
+<%= f.text_area :summary %><br><br><br><br>
+<%= f.submit "Add Note" %>
+<%end%>
