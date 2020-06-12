@@ -2,3 +2,5 @@
 <br>
 
 <%= render 'form' %>
+
+<%= button_to "Delete", @note, method: :delete, data: { confirm: "Really?" } %>

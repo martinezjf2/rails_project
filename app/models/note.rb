@@ -6,3 +6,17 @@ class Note < ApplicationRecord
     validates :summary, presence: true
 
 end
+
+
+def self.last_note
+    self.where("id IN (?), self.")
+end
+
+# def self.created_before(time)
+#     where("created_at < ?", time)
+#   end
+# end
+
+# def self.talented_seafarers
+#     self.where("id IN (?)", self.sailors.pluck(:id) & self.motorboat_operators.pluck(:id))
+#   end
