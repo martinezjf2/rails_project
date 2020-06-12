@@ -72,14 +72,24 @@ a {
   
     
   
-    body {
+    /* body {
       background-image: url('https://source.unsplash.com/1600x900/?books');
       background-size: cover;
       background-repeat: no-repeat;
       /* color: #333; */
       /* font-family: Sans-Serif; */
       /* line-height: 18px; */
-    }
+    }  */
+    .links {
+        float: right;
+        display: inline;
+        padding-left; 0;
+        margin-right: 4px;
+      }
+
+      .links a:link, .links a:visited, .links a:hover, .links a:active {
+        color: darkblue;
+      }
   
     #image1 {
       margin: auto;
