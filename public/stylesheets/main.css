@@ -1,0 +1,284 @@
+
+* {box-sizing: border-box}
+
+/* Add padding to containers */
+.container {
+  padding: 16px;
+}
+
+/* Full-width input fields */
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+}
+
+input[type=text]:focus, input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+/* Overwrite default styles of hr */
+hr {
+  border: 1px solid #f1f1f1;
+  margin-bottom: 25px;
+}
+
+/* Set a style for the submit/register button */
+.registerbtn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 16px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+}
+
+.registerbtn:hover {
+  opacity:1;
+}
+
+/* Add a blue text color to links */
+a {
+  color: dodgerblue;
+}
+
+/* Set a grey background color and center the text of the "sign in" section */
+.signin {
+  background-color: #f1f1f1;
+  text-align: center;
+}
+
+
+@media screen {
+    /* --- Reset Styles --- */
+    * {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+  
+    html, body {
+      height: 100%;
+      width: 100%;
+    }
+  
+    /* --- Welcome Page Styles --- */
+  
+    
+  
+    body {
+      background-image: url('https://source.unsplash.com/1600x900/?books');
+      background-size: cover;
+      background-repeat: no-repeat;
+      /* color: #333; */
+      /* font-family: Sans-Serif; */
+      /* line-height: 18px; */
+    }
+  
+    #image1 {
+      margin: auto;
+      display: block;
+    }
+  
+     /* body, html {
+      height: 100%;
+    } */
+    
+    * {
+      box-sizing: border-box;
+    }
+    
+    /* .bg-img { */
+      /* The image used */
+      /* background-image: url("https://www.ihealthex.com/wp-content/uploads/2019/08/vacation.jpg"); */
+    
+      
+    
+      /* Center and scale the image nicely */
+      /* background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      position: relative; */
+    /* }
+    
+    /* Add styles to the form container */
+    /* .container {
+      position: absolute;
+      right: 0;
+      margin: 20px;
+      max-width: 300px;
+      padding: 16px;
+      background-color: white;
+    } */
+  
+    /* Full-width input fields */
+    input[type=text], input[type=password], input[type=email] {
+      width: 100%;
+      padding: 15px;
+      margin: 5px 0 22px 0;
+      border: none;
+      background: #f1f1f1;
+      
+    }
+    /* Control the height of the image */
+    
+    input[type=text]:focus, input[type=password]:focus, input[type=eamil]:focus {
+      background-color: #ddd;
+      outline: none;
+    }
+    
+    /* Set a style for the submit button */
+    .btn {
+      background-color: #4CAF50;
+      color: white;
+      padding: 16px 20px;
+      border: none;
+      cursor: pointer;
+      width: 100%;
+      opacity: 0.9;
+    }
+    
+    .btn:hover {
+      opacity: 1;
+    }
+  
+    label {
+      display: flex;
+      align-items: center;
+      font: iren 'Fira Sans', sans-serif;
+    }
+  
+    span::after {
+      padding-left: 5px;
+    }
+  
+    input:invalid + span::after {
+      content: 'x';
+    }
+    input:valid+span::after {
+      content: 'Good';
+    }
+  
+    input,
+    label {
+      margin: .4rem 0;
+    }
+  
+    .form {
+          margin: 0 auto;
+          width: 210px;
+      }
+  
+      .form label{
+          display: inline-block;
+          text-align: right;
+          float: left;
+      }
+  
+      .form input{
+          display: inline-block;
+          text-align: left;
+          float: right;
+      }
+  
+    .wrapper {
+      background: #fff;
+      -moz-box-shadow: 0 0 10px rgba(0,0,0,.3);
+      -webkit-box-shadow: 0 0 10px rgba(0,0,0,.3);
+      box-shadow: 0 0 10px rgba(0,0,0,.3);
+      margin: 16px auto;
+      max-width: 960px;
+      padding: 2.25%; /* 18px / 800px */
+      width: 100%;
+    }
+  
+    h1 {
+      font-size: 42px;
+      line-height: 54px;
+    }
+  
+    h2 {
+      border-bottom: 2px solid #ccc;
+      font-size: 34px;
+      line-height: 36px;
+      margin-bottom: 16px;
+    }
+  
+    h3 {
+      font-size: 29px;
+      line-height: 36px;
+    }
+  
+    p {
+      font-size: 24px;
+      margin-bottom: 18px;
+    }
+  
+    .main {
+      overflow: hidden;
+    }
+  
+    .content {
+      float: center;
+      width: 60%; /* 480px / 800px */
+    }
+  
+    .sidebar {
+      background: #eee;
+      border: 1px solid #ccc;
+      float: right;
+      padding: 2.08333333333%; /* 5px / 240px */
+      width: 30%; /* 240px / 800px */
+    }
+  
+    .sidebar ul {
+      font-size: 14px;
+    }
+  
+    .branding {
+      clear: both;
+    }
+  
+    footer.branding {
+      border-top: 2px solid #ccc;
+      margin-top: 20px;
+      padding-top: 20px;
+    }
+  }
+  
+  @media screen and (max-width: 600px) {
+    .wrapper {
+      -moz-box-shadow: none;
+      -webkit-box-shadow: none;
+      box-shadow: none;
+      width: auto;
+    }
+  
+    .content, .sidebar {
+      float: none;
+      width: 100%;
+    }
+  
+    .sidebar {
+      background: transparent;
+      border: none;
+      border-top: 2px solid #ccc;
+      padding: 0;
+    }
+  
+    h1 {
+      font-size: 24px;
+      line-height: 36px;
+    }
+  
+    h2 {
+      font-size: 18px;
+      line-height: 24px;
+    }
+  }
