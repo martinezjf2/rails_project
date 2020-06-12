@@ -9,10 +9,10 @@
 <br>
 <ul>
 
-<h3><%= link_to book.title, book_path(book) %></h3> <%= book.author_first_name %> <%= book.author_last_name %><br><br>
+<h3><%= link_to book.title, book_path(book) %> <%= book.author_first_name %> <%= book.author_last_name %><br><br></h3>
 
 <% book.notes.each do |note| %>
-<%= note.summary %>
+<ul><%= note.summary %></ul>
 <%end%>
 
 <!-- display the last note submitted -->
@@ -20,5 +20,5 @@
 </ul>
 <% end %>
 
-may want to display a search bar here.
+<!-- may want to display a search bar here., could displat the description of the book and add it within the new book form and the table and validation in the models as well, -->
 <!-- when i add a new book, i want to make sure that the new book is added on top of the list -->
