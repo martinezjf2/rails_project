@@ -9,25 +9,18 @@ class NotesController < ApplicationController
     end
 
     def new 
-        #add something here based to associate the note with the book based on the url
-        # binding.pry
         @note = Note.new
         @note.book_id = params[:book_id]
-
     end
 
     def create
-
         @note = Note.new(note_params)
-        
-            @note.user_id = current_user.id
-        # binding.pry
-
-            if @note.save
+        @note.user_id = current_user.id
+        if @note.save
             redirect_to book_path(@note.book_id)
-            else
+        else
             render :new
-            end
+        end
     end
 
     def edit

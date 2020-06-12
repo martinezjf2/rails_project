@@ -8,9 +8,9 @@ class Note < ApplicationRecord
 end
 
 
-def self.last_note
-    self.where("id IN (?), self.")
-end
+# def self.last_note
+#     self.where("id IN (?), self.")
+# end
 
 # def self.created_before(time)
 #     where("created_at < ?", time)

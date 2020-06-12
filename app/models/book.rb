@@ -10,8 +10,8 @@ class Book < ApplicationRecord
 
 
     accepts_nested_attributes_for :notes
-
-
+   scope :alphabetize, -> {order(title: :asc)}
+# make scope method to alphatize the books title ascending
     private
 
   def is_title_case
