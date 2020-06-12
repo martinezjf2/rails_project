@@ -4,7 +4,7 @@
 <h3><%= @book.title %> - <%= @book.author_first_name%> <%=@book.author_last_name%></h3>
 
 <% @book.notes.each do |note| %>
-<%= note.summary %>
+<li><%= note.summary %> <%=link_to "Edit Note", edit_note_path(note) %></li>
 <%end%>
 
 <%= link_to "Edit Book", edit_book_path(@book) %> 
