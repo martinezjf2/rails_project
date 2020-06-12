@@ -39,6 +39,13 @@ class NotesController < ApplicationController
 
     end
 
+    def destroy
+        @note = Note.find_by(id: params[:id])
+        @note.delete
+        redirect_to book_path(@note.book_id)
+    end
+
+
     private
 
     def note_params
