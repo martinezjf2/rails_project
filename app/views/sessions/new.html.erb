@@ -1,18 +1,24 @@
 
+<br>
 <h1>Log in</h1>
+<br>
 
 <% if flash[:message]%>
-<%= flash[:message]%>
+<%= flash[:message] %>
+<br>
+<br>
 <%end%>
-<br><br>
+
 
 <%= form_for :user do |f| %>
   <%=f.label "Username" %>
-  <%=f.text_field :username %><br><br>
+   
+  <%=f.text_field :username, :placeholder => 'Enter Username' %><br><br>
   <%=f.label "Password" %>
-  <%=f.password_field :password %><br><br>
+  <%=f.password_field :password, :placeholder => 'Enter Password' %><br><br>
 
-  <%=f.submit "Login" %>
+  <%=f.submit "Login", :class => 'btn' %>
+  <!--<%= f.submit 'name of button here', :class => 'submit_class_name_here' %> -->
 
 
 <%end%>

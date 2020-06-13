@@ -1,15 +1,16 @@
-- i want to display the notes of the book on the page, getting stuck on  that.
-- i want the title to be next to the author first and last name,(books#index)
-
-- send me a link about the hidden fields, and what were they for
 
 - Also want a search to find any search on a title, notes, or author
 
-- when submitting a new book, nothing happens, it does not save, nor it does not redirect. changed the @book to :book and it works
-
-
-
-- i want the delete button on the show.html.erb in the book#show
-
 - change the omniauth to github
-- show the navbar when loggin in with facebook
+
+
+New_Notes
+
+  <!--<div class="field<%= ' field_with_errors' if @post.errors[:content].any? %>"> -->
+- want to incorporate the css for field with errors if anyfield is missing or incorrect
+- error message on validations, want to display error messages specifically to the error
+- navbar bigger
+- login form has to be @user not :user, so when im logged in, i should not be able to go to the /login route
+- title case the author first and last_names as well
+
+- also want to add a search bar in the books#index

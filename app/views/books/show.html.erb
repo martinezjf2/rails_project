@@ -5,9 +5,8 @@
 <h3><%= @book.title %> - <%= @book.author_first_name%> <%=@book.author_last_name%></h3>
 <br><br>
 <% @book.notes.each do |note| %>
-<li><%= note.summary %> <%=link_to "Edit Note", edit_note_path(note) %></li>
+<p><%= note.summary %></p> <%=link_to "Edit Note", edit_note_path(note) %></li>
 <%end%>
 <br><br>
-<%= link_to "Edit Book", edit_book_path(@book) %> 
 <%= link_to "Add Note", new_book_note_path(@book)%>
 <%= link_to "Delete Book", @book, method: :delete, data: { confirm: "Really?" } %>

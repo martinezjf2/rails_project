@@ -1,7 +1,7 @@
 
 <br>
 <br>
-<h1>Welcome to your Homepage</h1>
+<h1>Welcome <%=@user.first_name%></h1>
 <br>
 
 
@@ -14,7 +14,9 @@
 <h3><%= link_to book.title, book_path(book) %> - <%= book.author_first_name %> <%= book.author_last_name %><br><br></h3>
 
 <% book.notes.each do |note| %>
-<ul><%= note.summary %></ul>
+
+<ul><p><%= note.summary %></p></ul>
+
 <%end%>
 <br>
 

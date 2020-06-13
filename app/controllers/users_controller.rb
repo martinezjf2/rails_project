@@ -1,7 +1,7 @@
 class UsersController < ApplicationController
     before_action :require_login, except: [:new, :create, :home]
     def home
-
+        
     end
 
     def new

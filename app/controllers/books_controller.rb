@@ -2,6 +2,7 @@ class BooksController < ApplicationController
 
     def index
         @books = Book.all.alphabetize
+        @user = current_user
     end
 
     def new
