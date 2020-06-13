@@ -1,3 +1,7 @@
+
+
+require 'securerandom'
+
 class SessionsController < ApplicationController
 
 
@@ -20,6 +24,11 @@ class SessionsController < ApplicationController
             u.username = auth[:info][:name]
             u.password = 'omniauth_password' #random generator
             
+            #   if u.password == nil
+          #     u.password = SecureRandom.hex #random generator
+          #   # u.save
+          #   # binding.pry
+          #   end
             # binding.pry
           end
           
@@ -42,6 +51,7 @@ class SessionsController < ApplicationController
             flash[:message] = "Sorry please try again"
             render :new
         end
+        #add if statement to not render the login form when current user
 
     end
 

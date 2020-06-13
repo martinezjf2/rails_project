@@ -1,4 +1,5 @@
 class BooksController < ApplicationController
+    # before_action :require_login, except: [:new, :create, :home]
 
     def index
         @books = Book.all.alphabetize
