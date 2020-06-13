@@ -4,8 +4,8 @@
 <%= f.hidden_field :book_id %>
 
 <%= f.label "Page Number"%>
-<%= f.text_field :page_number %><br><br>
+<%= f.text_field :page_number, :placeholder => "Enter Page Number" %><br><br>
 <%= f.label "Summary" %>
-<%= f.text_area :summary %><br><br><br><br>
-<%= f.submit "Add Note" %>
+<%= f.text_area :summary, :placeholder => "Enter Summary..." %><br><br><br><br>
+<%= f.submit "Add Note" , :class => 'btn' %>
 <%end%>
