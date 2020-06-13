@@ -231,6 +231,11 @@ a {
       line-height: 36px;
       display: inline;
     }
+
+    h4 {
+      font-size: 20px;
+      display: inline;
+    }
   
     p {
       font-size: 24px;
