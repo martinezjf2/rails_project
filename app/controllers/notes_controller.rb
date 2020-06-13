@@ -18,8 +18,10 @@ class NotesController < ApplicationController
         @note.user_id = current_user.id
         if @note.save
             redirect_to book_path(@note.book_id)
+            #add flash message "Successfully saved"
         else
             render :new
+            #add flash messages of the errors
         end
     end
 
@@ -29,7 +31,15 @@ class NotesController < ApplicationController
 
 
     def update
-
+        @note = Note.find_by(id: params[:id])
+        @note.update(note_params)
+        if @note.save
+            redirect_to book_path(@note.book_id)
+            #add error message "Successfully updated"
+        else
+            render :edit
+            #add flash errors why it could not save
+        end
     end
 
     def destroy

@@ -1,6 +1,6 @@
 
 <br>
-<h1>Log in</h1>
+<h1>Log In</h1>
 <br>
 
 <% if flash[:message]%>
@@ -11,10 +11,10 @@
 
 
 <%= form_for :user do |f| %>
-  <%=f.label "Username" %>
+  <p><%=f.label "Username:" %></p>
    
   <%=f.text_field :username, :placeholder => 'Enter Username' %><br><br>
-  <%=f.label "Password" %>
+  <p><%=f.label "Password:" %></p>
   <%=f.password_field :password, :placeholder => 'Enter Password' %><br><br>
 
   <%=f.submit "Login", :class => 'btn' %>
