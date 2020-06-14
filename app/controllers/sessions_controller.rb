@@ -7,6 +7,9 @@ class SessionsController < ApplicationController
 
     def new
       # @user = User.new
+      if current_user
+        redirect_to books_path
+      end
     end
 
     def fb_create
@@ -47,6 +50,7 @@ class SessionsController < ApplicationController
         if @user && @user.authenticate(params[:user][:password])
             session[:user_id] = @user.id
             redirect_to books_path
+             
         else
             flash[:message] = "Sorry please try again"
             render :new
