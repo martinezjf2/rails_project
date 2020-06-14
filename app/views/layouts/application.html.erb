@@ -21,7 +21,7 @@
     <div>
       <h4><span><%=link_to 'All Books', books_path%></span></h4>
       <h4><span><%=link_to 'New Book', new_book_path%></span></h4>
-      <h4><span><%=link_to "Logout", logout_path, method: :delete %></span></h4>
+      <h4><span><%=link_to "Logout", logout_path, method: :delete, data: {confirm: "Really?" } %></span></h4>
     </div>
     <%end%>
 
