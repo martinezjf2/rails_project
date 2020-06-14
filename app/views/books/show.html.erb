@@ -9,4 +9,5 @@
 <%end%>
 <br><br>
 <%= link_to "Add Note", new_book_note_path(@book)%>
+<%= link_to "Edit Book", edit_book_path(@book) %>
 <%= link_to "Delete Book", @book, method: :delete, data: { confirm: "Really?" } %>
