@@ -15,4 +15,4 @@ New_Notes
 
 - also want to add a search bar in the books#index
 
-- also make <p> inline, and make a <p2> not inline
+
