@@ -1,11 +1,28 @@
 
+
+
 <br>
 
 <h1>Let's Add A New Book</h1>
 <br>
+
+
+<% if @book.errors.any? %>
+    <p>We may have some issues:</p>
+
+  <ul>
+    <% @book.errors.full_messages.each do |message| %>
+      <li> - <%= message %></li>
+    <%end%>
+  </ul>
+<%end%>
+<br>
+<br>
+
+
 <%= form_for @book do |f| %>
 <%= f.label "Title" %>
-<%= f.text_field :title, :placeholder => "Enter Book Title"%><br><br>
+<%= f.text_field :title, :placeholder => "Enter Book Title" %><br><br>
 
 <%= f.label "Author's First Name" %>
 <%= f.text_field :author_first_name, :placeholder => "Enter Author's First Name"%><br><br>

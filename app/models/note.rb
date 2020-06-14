@@ -2,8 +2,8 @@ class Note < ApplicationRecord
     belongs_to :user
     belongs_to :book
 
-    validates :page_number, presence: true
-    validates :summary, presence: true
+    validates :page_number, presence: { message: "must be present" }
+    validates :summary, presence: { message: "must be present" }
 
 end
 
