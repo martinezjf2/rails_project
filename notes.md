@@ -3,7 +3,6 @@
 
 - change the omniauth to github
 
-- edit book
 
 
 New_Notes
@@ -13,7 +12,6 @@ New_Notes
 
 
 - login form has to be @user not :user, so when im logged in, i should not be able to go to the /login route (users#new) or the root route (users#home)
-- title case the author first and last_names as well
 
 - also want to add a search bar in the books#index
 
