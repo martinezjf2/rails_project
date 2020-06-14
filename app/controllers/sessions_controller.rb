@@ -52,7 +52,7 @@ class SessionsController < ApplicationController
             redirect_to books_path
              
         else
-            flash[:message] = "Sorry please try again"
+            flash[:message] = "Sorry, Please Try Again"
             render :new
         end
         #add if statement to not render the login form when current user
