@@ -4,6 +4,28 @@
 <h1>Welcome <%=@user.first_name%></h1>
 <br>
 
+<!--<%= search_form_for @search do |f| %>
+<%= f.label :title_cont, "Search By Title" %>
+<%= f.search_field :title_cont %>
+<%= f.submit "Search" %>
+<% end %>
+<br>
+<%= link_to "Reset Search", books_path %>
+
+<br>
+<br>
+
+<% @items.each do |item| %>
+<li><%= link_to item.title, book_path(item) %> - <%= item.author_last_name %> <%= item.author_last_name%></li>
+<% end %>
+
+
+<br>
+<br> -->
+
+
+
+
 
 
 <!-- <p>Show all books with notes underneath here, and make sure you have the logout button within the navbar, also, want to have a button such as to add a book, and to add a note to the book right after the note, also want to make sure to add a error message<p> -->

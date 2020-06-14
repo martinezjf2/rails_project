@@ -4,15 +4,18 @@ class Book < ApplicationRecord
     validate :is_title_case 
     before_validation :make_title_case 
     
-    validates :title, presence: true
-    validates :author_first_name, presence: true
-    validates :author_last_name, presence: true
+    validates :title, presence: { message: "can't be empty" }
+    validates :author_first_name, presence: { message: "can't be empty" }
+    validates :author_last_name, presence: { message: "can't be empty" }
 
 
     accepts_nested_attributes_for :notes
-   scope :alphabetize, -> {order(title: :asc)}
-# make scope method to alphatize the books title ascending
-    private
+    scope :alphabetize, -> {order(title: :asc)}
+
+    
+
+
+  private
 
   def is_title_case
     if title.split.any?{|w|w[0].upcase != w[0]}

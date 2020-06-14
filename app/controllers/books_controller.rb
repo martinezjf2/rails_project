@@ -2,8 +2,12 @@ class BooksController < ApplicationController
     # before_action :require_login, except: [:new, :create, :home]
 
     def index
-        @books = Book.all.alphabetize
-        @user = current_user
+        @search = Book.ransack(params[:q])
+        if @search
+            @items = @search.result
+            @user = current_user
+            @books = Book.all.alphabetize
+        end
     end
 
     def new
@@ -19,8 +23,9 @@ class BooksController < ApplicationController
             redirect_to book_path(@book) #make sure the latest book submitted is on top
         else
             render :new
-            flash[:notice] = "Please fill all requirements before submitting"
+            # flash[:notice] = "Please fill all requirements before submitting"
         end
+
     end
 
     def show

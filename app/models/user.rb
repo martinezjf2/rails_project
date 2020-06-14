@@ -3,9 +3,9 @@ class User < ApplicationRecord
     has_many :books, through: :notes
     has_secure_password
 
-    validates :first_name, presence: true
-    validates :last_name, presence: true
-    validates :email, presence: true, uniqueness: true
-    validates :username, presence: true, uniqueness: true 
+    validates :first_name, presence: { message: "can't be empty" }
+    validates :last_name, presence: { message: "can't be empty" }
+    validates :email, presence: {  :message => "can't be empty" }, uniqueness: true 
+    validates :username, presence: {  :message => "can't be empty" }, uniqueness: true 
 
 end
