@@ -73,13 +73,15 @@ a {
     
   
      /* body {
-      background-image: url('https://source.unsplash.com/1600x900/?books');
+      background-image: ('images/railsBackground.jpg');
       background-size: cover;
-      background-repeat: no-repeat;
+      background-repeat: no-repeat; */
       /* color: #333; */
       /* font-family: Sans-Serif; */
       /* line-height: 18px; */
-} */
+}
+/* https://source.unsplash.com/1600x900/?books' */
+     
     .links {
         float: right;
         display: inline;
@@ -104,10 +106,10 @@ a {
       box-sizing: border-box;
     }
     
-    /* .bg-img { */
+    /* .bg-img {
       /* The image used */
       /* background-image: url("https://www.ihealthex.com/wp-content/uploads/2019/08/vacation.jpg"); */
-    
+     
       
     
       /* Center and scale the image nicely */
