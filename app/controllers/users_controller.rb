@@ -1,6 +1,10 @@
 class UsersController < ApplicationController
     before_action :redirect_to_login, only: [:new, :home]
 
+    def index
+        redirect_to '/signup'
+    end
+
     def home
         # if current_user
         #     redirect_to books_path
