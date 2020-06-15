@@ -1,8 +1,10 @@
 class UsersController < ApplicationController
+    before_action :redirect_to_login, only: [:new, :home]
+
     def home
-        if current_user
-            redirect_to books_path
-        end
+        # if current_user
+        #     redirect_to books_path
+        # end
     end
 
     def new
