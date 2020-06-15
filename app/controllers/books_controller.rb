@@ -1,5 +1,5 @@
 class BooksController < ApplicationController
-    # before_action :require_login, except: [:new, :create, :home]
+    before_action :require_login
 
     def index
         @search = Book.ransack(params[:q])

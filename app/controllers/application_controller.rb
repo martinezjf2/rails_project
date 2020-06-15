@@ -15,5 +15,11 @@ helper_method :current_user
       end
   end
 
+  def redirect_to_login
+    if current_user
+      redirect_to '/books'
+    end
+  end
+
 end
 

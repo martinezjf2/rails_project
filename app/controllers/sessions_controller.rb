@@ -1,15 +1,15 @@
 
 
-require 'securerandom'
+# require 'securerandom'
 
 class SessionsController < ApplicationController
-
+before_action :redirect_to_login, only: [:new]
 
     def new
-      # @user = User.new
-      if current_user
-        redirect_to books_path
-      end
+    #   # @user = User.new
+    #   if current_user
+    #     redirect_to books_path
+    #   end
     end
 
     def fb_create
@@ -25,18 +25,19 @@ class SessionsController < ApplicationController
             u.first_name = auth[:info][:name].split[0]
             u.last_name = auth[:info][:name].split[1]
             u.username = auth[:info][:name]
-            u.password = 'omniauth_password' #random generator
-            
-            #   if u.password == nil
-          #     u.password = SecureRandom.hex #random generator
-          #   # u.save
+            # u.password = 'omniauth_password' #random generator
+            # binding.pry
+              # if u.password == nil
+            u.password = SecureRandom.hex #random generator
+            # u.save
           #   # binding.pry
-          #   end
+            # end
             # binding.pry
           end
           
         #  binding.pry
           if @user
+    
             session[:user_id] = @user.id
             redirect_to books_path(@user)
           else
