@@ -5,6 +5,9 @@ Rails.application.routes.draw do
   resources :notes
   resources :books
 
+  resources :users do
+    resources :books
+  end
 
   resources :books do
     resources :notes
