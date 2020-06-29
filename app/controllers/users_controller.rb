@@ -15,6 +15,11 @@ class UsersController < ApplicationController
         @user = User.new
     end
 
+    # def show
+    #     if current_user
+
+    # end
+
     def create
         # binding.pry
         @user = User.new(user_params)
