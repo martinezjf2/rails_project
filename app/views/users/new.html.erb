@@ -4,7 +4,8 @@
 <h1>Create a New User</h1>
 <br>
 <br>
-<% if @user.errors.any? %>
+
+<!-- <% if @user.errors.any? %>
     <p>We may have some issues:</p>
 
   <ul>
@@ -14,7 +15,11 @@
   </ul>
   <br>
   <br>
-<%end%>
+<%end%> -->
+
+<%= show_errors(@user) %>
+
+
 
 
 <%= form_for @user do |f| %>

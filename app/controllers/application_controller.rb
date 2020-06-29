@@ -12,7 +12,7 @@ helper_method :current_user
       current_user
     else
         redirect_to '/'
-      end
+    end
   end
 
   def redirect_to_login

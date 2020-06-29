@@ -21,7 +21,7 @@
 
   <% if current_user %>
     <div>
-      <h4><span><%=link_to 'Home', root_path%></span></h4>
+      <h4><%=link_to 'Home', root_path%></h4>
       <h4><span><%=link_to 'All Books', user_books_path(current_user)%></span></h4>
       <h4><span><%=link_to 'New Book', new_book_path%></span></h4>
       <h4><span><%=link_to "Logout", logout_path, method: :delete, data: {confirm: "Really?" } %></span></h4>
