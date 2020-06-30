@@ -8,4 +8,10 @@ class User < ApplicationRecord
     validates :email, presence: {  :message => "can't be empty" }, uniqueness: true 
     validates :username, presence: {  :message => "can't be empty" }, uniqueness: true 
 
+
+
+    # def self.search(search)
+    #     if search
+    #         book = Book.find_by(name: search)
+
 end

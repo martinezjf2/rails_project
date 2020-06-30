@@ -25,3 +25,6 @@ post '/books/new' => "books#create"
   
 
 end
+
+# rails routes can also be navigated through
+# http://localhost:3000/rails/info/routes

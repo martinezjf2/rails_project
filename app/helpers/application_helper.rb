@@ -11,8 +11,11 @@ module ApplicationHelper
 
     def show_errors(object)
         if object.errors.any?
-            if !object.errors.full_messages.blank?
-                object.errors.full_messages.join(", ")
+            content_tag :ol
+             object.errors.full_messages.each do |message| 
+                content_tag(:li, message)
+                
+                
             end
         end
     end
