@@ -6,38 +6,19 @@ class SessionsController < ApplicationController
 before_action :redirect_to_login, only: [:new]
 
     def new
-    #   # @user = User.new
-    #   if current_user
-    #     redirect_to books_path
-    #   end
+    
     end
 
     def fb_create
-        # @user = User.find_or_create_by(email: auth["info"]["email"])
-        # if !@user.password
-        #     @user.password = 'omniauth_password' #random generator
-        # end
-        # @user.save
-        # session[:user_id] = @user.id
-        # binding.pry
-        # redirect_to books_path(@user)
         @user = User.find_or_create_by(email: auth[:info][:email]) do |u|
+          # binding.pry
             u.first_name = auth[:info][:name].split[0]
             u.last_name = auth[:info][:name].split[1]
             u.username = auth[:info][:name]
-            # u.password = 'omniauth_password' #random generator
-            # binding.pry
-              # if u.password == nil
             u.password = SecureRandom.hex #random generator
-            # u.save
-          #   # binding.pry
-            # end
-            # binding.pry
-          end
+        end
           
-        #  binding.pry
           if @user
-    
             session[:user_id] = @user.id
             redirect_to books_path(@user)
           else

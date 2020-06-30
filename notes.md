@@ -16,3 +16,27 @@ New_Notes
 - also want to add a search bar in the books#index
 
 
+
+
+
+
+<%= search_form_for @search do |f| %>
+<%= f.label :title_cont, "Search By Title" %>
+<%= f.search_field :title_cont %>
+<%= f.submit "Search" %>
+<% end %>
+<br>
+<%= link_to "Reset Search", books_path %>
+
+<br>
+<br>
+
+<% @items.each do |item| %>
+<li><%= link_to item.title, book_path(item) %> - <%= item.author_last_name %> <%= item.author_last_name%></li>
+<% end %>
+
+
+<br>
+<br> -->
+
+

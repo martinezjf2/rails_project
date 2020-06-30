@@ -16,7 +16,9 @@ class Book < ApplicationRecord
     accepts_nested_attributes_for :notes
     scope :alphabetize, -> {order(title: :asc)}
 
-    
+    def self.search(search)
+      where('title LIKE ?', "%#{search}%")
+    end
 
 
   private

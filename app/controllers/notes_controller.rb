@@ -1,5 +1,5 @@
 class NotesController < ApplicationController
-    # before_action :require_login, except: [:new, :create, :show, ]
+    before_action :require_login, except: [:new, :create, :show, ]
 
     def index
         @notes = Note.all
@@ -15,8 +15,8 @@ class NotesController < ApplicationController
     end
 
     def create
-        @note = Note.new(note_params)
-        @note.user_id = current_user.id
+        @note = current_user.notes.new(note_params)
+        # @note.user_id = current_user.id
         if @note.save
             redirect_to book_path(@note.book_id)
             #add flash message "Successfully saved"

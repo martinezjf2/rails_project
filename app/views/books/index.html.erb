@@ -5,24 +5,15 @@
 <br>
 <br>
 
-<!--<%= search_form_for @search do |f| %>
-<%= f.label :title_cont, "Search By Title" %>
-<%= f.search_field :title_cont %>
-<%= f.submit "Search" %>
+
+
+<%= form_tag("/books", method: :get) do %>
+Search By Title: 
+<br>
+<br>
+<%= text_field_tag :search, params[:search] %>
+<%= submit_tag('Search')%>
 <% end %>
-<br>
-<%= link_to "Reset Search", books_path %>
-
-<br>
-<br>
-
-<% @items.each do |item| %>
-<li><%= link_to item.title, book_path(item) %> - <%= item.author_last_name %> <%= item.author_last_name%></li>
-<% end %>
-
-
-<br>
-<br> -->
 
 
 
@@ -30,6 +21,9 @@
 
 
 <!-- <p>Show all books with notes underneath here, and make sure you have the logout button within the navbar, also, want to have a button such as to add a book, and to add a note to the book right after the note, also want to make sure to add a error message<p> -->
+<br>
+<br>
+
 <% @books.each do |book| %>
 <br>
 <ul>
@@ -48,5 +42,4 @@
 </ul>
 <% end %>
 
-<!-- may want to display a search bar here., could displat the description of the book and add it within the new book form and the table and validation in the models as well, -->
 <!-- when i add a new book, add flash[:message] Successfully Added -->

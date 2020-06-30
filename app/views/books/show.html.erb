@@ -6,7 +6,7 @@
 <br><br>
 <% @book.notes.each do |note| %>
 <br>
-<p><%= note.summary %></p> <%=link_to "Edit Note", edit_note_path(note) %></li>
+<p><%= note.summary %></p> <%=link_to "Edit Note", edit_book_note_path(@book, note) %></li>
 <br>
 <%end%>
 <br>

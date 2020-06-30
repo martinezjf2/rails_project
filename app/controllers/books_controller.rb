@@ -2,17 +2,19 @@ class BooksController < ApplicationController
     before_action :require_login
 
     def index
-        @search = Book.ransack(params[:q])
-        if @search
-            @items = @search.result
             @user = current_user
+            if params[:search]
+                @books = Book.all.search(params[:search])
+            else
+            #Ransack
             @books = Book.all.alphabetize
-        end
+            end
     end
 
     def new
         @book = Book.new
         @book.notes.build
+        # @user = User.find_by(id: params [:id])
     end
 
     def create
