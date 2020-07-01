@@ -1,6 +1,15 @@
 
 
 <br>
+
+
+<% if flash[:message] %>
+<br>
+<h4><em><%= flash[:message] %></em></h4>
+<br>
+<br>
+<%end%>
+
 <br>
 <h3><%= @book.title %> - <%= @book.author_first_name%> <%=@book.author_last_name%></h3>
 <br><br>

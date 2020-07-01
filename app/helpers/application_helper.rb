@@ -21,16 +21,3 @@ module ApplicationHelper
     end
 end
 
-    
-
-# <% if @user.errors.any? %>
-#     <p>We may have some issues:</p>
-
-#   <ul>
-#     <% @user.errors.full_messages.each do |message| %>
-#       <li> - <%= message %></li>
-#     <%end%>
-#   </ul>
-#   <br>
-#   <br>
-# <%end%>

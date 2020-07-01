@@ -10,8 +10,5 @@ class User < ApplicationRecord
 
 
 
-    # def self.search(search)
-    #     if search
-    #         book = Book.find_by(name: search)
 
 end

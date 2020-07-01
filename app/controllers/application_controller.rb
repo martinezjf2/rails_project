@@ -21,5 +21,22 @@ helper_method :current_user
     end
   end
 
+  def find_book
+    Book.find_by(id: params[:id])
+  end
+
+  def all_books
+    Book.all
+  end
+
+  def all_notes
+    Note.all
+  end
+
+  def find_note
+    Note.find_by(id: params[:id])
+  end
+  
+
 end
 
