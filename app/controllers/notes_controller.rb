@@ -10,6 +10,7 @@ class NotesController < ApplicationController
     end
 
     def new 
+        
         @note = Note.new
         @note.book_id = params[:book_id]
     end

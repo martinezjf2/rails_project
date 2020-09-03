@@ -14,6 +14,7 @@ class Book < ApplicationRecord
 
 
     accepts_nested_attributes_for :notes
+    
     scope :alphabetize, -> {order(title: :asc)}
 
     def self.search(search)

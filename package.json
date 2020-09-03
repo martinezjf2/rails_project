@@ -1,5 +1,5 @@
 {
-  "name": "Ruby_on_rails_project",
+  "name": "ruby_on_rails_project",
   "private": true,
   "dependencies": {
     "@rails/actioncable": "^6.0.0",
