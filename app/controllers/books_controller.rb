@@ -11,15 +11,23 @@ class BooksController < ApplicationController
     end
 
     def new
-        @book = Book.new.notes.build
+        
+        @book = Book.new
+        @note = Note.new
+        @book.notes.build
+        # binding.pry
+        
     end
 
     def create
+        binding.pry
         @book = Book.new(book_params)
+        binding.pry
         current_user.notes << @book.notes[0]
+        binding.pry
         if @book.save
             redirect_to book_path(@book)
-            flash[:message] = "Sucessful"
+            flash[:message] = "Successful"
         else
             render :new
         end
