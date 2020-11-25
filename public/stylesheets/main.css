@@ -72,14 +72,15 @@ a {
   
     
   
-     /* body {
-      background-image: ('images/railsBackground.jpg');
+     body {
+      background-image: url('/public/stylesheets/chalkboard2.jpg');
       background-size: cover;
-      background-repeat: no-repeat; */
+      background-repeat: no-repeat;
       /* color: #333; */
       /* font-family: Sans-Serif; */
       /* line-height: 18px; */
-}
+      }
+     
 /* https://source.unsplash.com/1600x900/?books' */
      
     .links {
