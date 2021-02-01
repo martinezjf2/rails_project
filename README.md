@@ -2,7 +2,7 @@
 
 BookMark is a tool that allows students to do create notes to books as a bookmark, and specify which page of the book you want the bookmark.
 
-Additional line of information text about what the project does. Your introduction should be around 2 or 3 sentences. Don't go overboard, people won't read it.
+BookMark will help students create Bookmarks and order your book alphebetically. If you need to search for a specific book, you can surely do so by using the search bar. If you need to edit or delete any note or any book, you can do so as well by clicking edit or delete.
 
 ## Prerequisites
 
