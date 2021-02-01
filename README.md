@@ -1,24 +1,41 @@
-# README
+# BookMark
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+BookMark is a `tool` that allows `<students>` to do `<create notes to books as a bookmark, and specify which page of the book you want the bookmark>`.
 
-Things you may want to cover:
+Additional line of information text about what the project does. Your introduction should be around 2 or 3 sentences. Don't go overboard, people won't read it.
 
-* Ruby version
+## Prerequisites
 
-* System dependencies
+Before you begin, ensure you have met the following requirements:
+<!--- These are just example requirements. Add, duplicate or remove as required --->
+* You have installed the latest version of `<Ruby on Rails>`
 
-* Configuration
 
-* Database creation
+## Using BookMark
 
-* Database initialization
+To use BookMark, follow these steps:
 
-* How to run the test suite
+```
+<usage_example>
+```
 
-* Services (job queues, cache servers, search engines, etc.)
+Add run commands and examples you think users will find useful. Provide an options reference for bonus points!
 
-* Deployment instructions
+## Contributing to BookMark
+<!--- If your README is long or you have some specific process or steps you want contributors to follow, consider creating a separate CONTRIBUTING.md file--->
+To contribute to BookMark, follow these steps:
 
-* ...
+1. Fork this repository.
+2. Create a branch: `git checkout -b <branch_name>`.
+3. Make your changes and commit them: `git commit -m '<commit_message>'`
+4. Push to the original branch: `git push origin BookMark/<location>`
+5. Create the pull request.
+
+Alternatively see the GitHub documentation on [creating a pull request](https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request).
+
+
+
+## Contact
+
+If you want to contact me you can reach me at <martinezjf2@gmail.com>.
+
