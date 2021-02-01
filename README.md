@@ -1,6 +1,6 @@
 # BookMark
 
-BookMark is a `tool` that allows `<students>` to do `<create notes to books as a bookmark, and specify which page of the book you want the bookmark>`.
+BookMark is a tool that allows students to do create notes to books as a bookmark, and specify which page of the book you want the bookmark.
 
 Additional line of information text about what the project does. Your introduction should be around 2 or 3 sentences. Don't go overboard, people won't read it.
 
@@ -8,7 +8,7 @@ Additional line of information text about what the project does. Your introducti
 
 Before you begin, ensure you have met the following requirements:
 <!--- These are just example requirements. Add, duplicate or remove as required --->
-* You have installed the latest version of `<Ruby on Rails>`
+* You have installed the latest version of Ruby on Rails
 
 
 ## Using BookMark
@@ -16,10 +16,10 @@ Before you begin, ensure you have met the following requirements:
 To use BookMark, follow these steps:
 
 ```
-<usage_example>
+rails s
 ```
 
-Add run commands and examples you think users will find useful. Provide an options reference for bonus points!
+Run the above commamnd on the root directory to start up the server. On your browser, you can can go to the localhost server that is provided to you within the terminal.
 
 ## Contributing to BookMark
 <!--- If your README is long or you have some specific process or steps you want contributors to follow, consider creating a separate CONTRIBUTING.md file--->
